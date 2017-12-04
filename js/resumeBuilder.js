@@ -167,7 +167,7 @@ var webProjects = {
             description: "Created a single-page app listing places of interests in SF with details showing when interacted. Users can search all included landmarks and, when selected, additional information about a landmark is presented. Implemented MVVM design pattern using Knockout.js and simple filtering functionality. Utilized Google Map APIs and RESTful Flickr APIs for map interaction and image info fetching.",
             url: "https://github.com/zhichl/neighborhood-map",
             images: [
-                ""
+                "images/neighborhood_map.png"
             ]
         },
 
@@ -177,7 +177,7 @@ var webProjects = {
             description: "Built a complete browser-based card matching game (also known as Concentration). Used JQuery for DOM manipulation and event listening. Constructed the code in an extendable way for further difficulty upgrading needed.",
             url: "https://github.com/zhichl/memory-game", 
             images: [
-                ""
+                "images/memory_game.png"
             ]
         },
 
@@ -187,7 +187,7 @@ var webProjects = {
             description: "This is a classic forgger arcade game built with vanilla JS and CSS. Goal to the game is to direct the character going from the grass part to the river part without colliding with any of the enemy bugs.",
             url: "https://github.com/zhichl/arcade-game-frogger", 
             images: [
-                ""
+                "images/arcade_game_frogger.png"
             ]
         },
     ],
@@ -241,7 +241,7 @@ var otherProjects = {
             description: "Constructed building temperature predicting model based on algorithm from the Grey Theory. Proposed a new pre-extinguish fire brigade fire control method instead of the traditional one. Awarded Excellence by Experts Committee (Awarded to 3/37 projects). Results applied by Apollo-Rescue team in competitions and published in ICCAS 2014.",
             url: "http://ieeexplore.ieee.org/document/6988051/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKC%2BwVbR5S02kn5VQWx45cw%3D%3D",
             images: [
-                "images/non-predicted.png", "images/predicted.png", "images/pre-extinguish02-annotated.png"
+                "images/non_predicted.png", "images/predicted.png", "images/pre_extinguish02_annotated.png"
             ]
         }
     ],
