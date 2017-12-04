@@ -180,6 +180,10 @@ img {
   padding: 10px;
 }
 
+.project-demo-link {
+  display: inline-block;
+}
+
 span {
   padding: 5px;
 }
