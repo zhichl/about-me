@@ -273,4 +273,4 @@ education.display();
 work.display();
 webProjects.display();
 otherProjects.display();
-$("#mapDiv").append(googleMap);
+// $("#mapDiv").append(googleMap);
