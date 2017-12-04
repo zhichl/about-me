@@ -3,7 +3,7 @@ var bio = {
     role: "Front-End Develeper",
     contacts: {
         mobile: "(631) 590-9058",
-        email: "e.mbryo@hotmail.com",
+        email: "roger.zq.liu@gmail.com",
         github: "zhichl",
         location: "San Francisco Bay Area"
     },
@@ -71,7 +71,7 @@ var education = {
         title: "Front-End Nanodegree",
         school: "Udacity",
         dates: "Sep 2016 - Aug 2017",
-        url: "https://www.udacity.com/"
+        url: "https://printer.udacity.com/certificate/nd001?utm_medium=email&utm_campaign=nd-graduation-trigger&utm_source=blueshift&utm_content=nd-graduation&bsft_clkid=0c39b34b-5a22-481d-a481-b71812ec054f&bsft_uid=c69b802e-6758-4ddf-8e1b-c5f950b24cb6&bsft_mid=1b3b89e&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKC%2BwVbR5S02kn5VQWx45cw%3D%3D"
     }],
 
     display: function () {
@@ -127,7 +127,7 @@ var work = {
         title: "Web Developer",
         location: "San Francisco, CA",
         dates: "Jul 2017 - Present",
-        description: "Develop dynamic websites and cross-platform front-end interactive applications using modern design patterns and website architecture using the core technologies Javascript, HTML, CSS, Swift and JS frameworks."
+        description: "Develop dynamic websites and front-end interactive applications using modern design patterns and website architecture. Employ the core web technologies Javascript, HTML, CSS and JS frameworks."
     }],
 
     display: function () {
@@ -149,32 +149,97 @@ var work = {
 
 };
 
-var projects = {
-    projects: [{
-            title: "Pathology Visual Query App",
-            dates: "Sep 2016 - Jan 2017",
+var webProjects = {
+    projects: [
+        {
+            title: "Readable App (Online demo not available yet)",
+            dates: "Oct. 2017 -- Present",
+            description: "Combined the declarative component model from React with the state management features of Redux to build a \"Readable\" application. Users can submit their own posts, comment on existing posts, edit, delete, upvote / downvote posts and comments. Leveraged the strengths of React-Router to manage routing of the application. Implemented a backend server providing request APIs using Express and MongoDB.",
+            url: "#", // https://github.com/zhichl/readable
+            images: [
+                ""
+            ]
+        },
+
+        {
+            title: "Neighborhood Map App",
+            dates: "Sep. 2017 -- Oct. 2017",
+            description: "Created a single-page app listing places of interests in SF with details showing when interacted. Users can search all included landmarks and, when selected, additional information about a landmark is presented. Implemented MVVM design pattern using Knockout.js and simple filtering functionality. Utilized Google Map APIs and RESTful Flickr APIs for map interaction and image info fetching.",
+            url: "https://github.com/zhichl/neighborhood-map",
+            images: [
+                ""
+            ]
+        },
+
+        {
+            title: "Memory Game",
+            dates: "March. 2017 -- May. 2017",
+            description: "Built a complete browser-based card matching game (also known as Concentration). Used JQuery for DOM manipulation and event listening. Constructed the code in an extendable way for further difficulty upgrading needed.",
+            url: "https://github.com/zhichl/memory-game", 
+            images: [
+                ""
+            ]
+        },
+
+        {
+            title: "Arcade Game: Frogger",
+            dates: "Jan. 2017 -- March. 2017",
+            description: "This is a classic forgger arcade game built with vanilla JS and CSS. Goal to the game is to direct the character going from the grass part to the river part without colliding with any of the enemy bugs.",
+            url: "https://github.com/zhichl/arcade-game-frogger", 
+            images: [
+                ""
+            ]
+        },
+    ],
+
+    display: function () {
+        for (var pi = 0; pi < this.projects.length; pi++) {
+            $("#web-projects").append(HTMLprojectStart);
+
+            var project = this.projects[pi];
+            var projectInfo = [];
+            
+            projectInfo.push(HTMLprojectTitle.replace("#", project.url).replace("%data%", project.title));
+            projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
+            projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
+            for (var imgi = 0; imgi < project.images.length; imgi++) {
+                projectInfo.push(HTMLprojectImage.replace("%data%", project.images[imgi]));
+            }
+            var projectEntry = $("#web-projects .project-entry:last");
+            for (var pInfoi = 0; pInfoi < projectInfo.length; pInfoi++) {
+                projectEntry.append(projectInfo[pInfoi]);
+            }
+        }
+    }
+};
+
+var otherProjects = {
+    projects: [
+        {
+            title: "Pathology Visual Query App (Online demo not available)",
+            dates: "Sep 2016 -- Jan 2017",
             description: "Employed the design pattern of MVC to develope this iOS App. Implemented methods to represent the nuclei distribution on respect of direction and density from pathology images of PAIS, which allows users to locate and inspect pathological areas in tissue based on their own drawing. Constructed a simple back-end server for communication between the database and the application.",
-
+            url: "#",
             images: [
                 ""
             ]
         },
 
         {
-            title: "Prediction of Gene Localization",
-            dates: "Oct 2015 - Dec 2015",
+            title: "Prediction of Gene Localization (Online demo not available)",
+            dates: "Oct 2015 -- Dec 2015",
             description: "Implemented K-Nearest Neighbor method to predict gene localization with gene data with features. Dealing with missing values to predict given incomplete training gene data. Analysed simulated data to obtain velocity field and compared it with theoretical data to obtain results.",
-
+            url: "#",
             images: [
                 ""
             ]
         },
 
         {
-            title: "Proposing a New Method for Fire Brigade Agent in RoboCup Rescue",
-            dates: "2013 - 2014",
+            title: "Fire Brigade Agent Strategy in RoboCup Rescue",
+            dates: "2013 -- 2014",
             description: "Constructed building temperature predicting model based on algorithm from the Grey Theory. Proposed a new pre-extinguish fire brigade fire control method instead of the traditional one. Awarded Excellence by Experts Committee (Awarded to 3/37 projects). Results applied by Apollo-Rescue team in competitions and published in ICCAS 2014.",
-
+            url: "http://ieeexplore.ieee.org/document/6988051/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKC%2BwVbR5S02kn5VQWx45cw%3D%3D",
             images: [
                 "images/non-predicted.png", "images/predicted.png", "images/pre-extinguish02-annotated.png"
             ]
@@ -183,17 +248,18 @@ var projects = {
 
     display: function () {
         for (var pi = 0; pi < this.projects.length; pi++) {
-            $("#projects").append(HTMLprojectStart);
+            $("#other-projects").append(HTMLprojectStart);
 
             var project = this.projects[pi];
             var projectInfo = [];
-            projectInfo.push(HTMLprojectTitle.replace("%data%", project.title));
+            
+            projectInfo.push(HTMLprojectTitle.replace("#", project.url).replace("%data%", project.title));
             projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
             projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
             for (var imgi = 0; imgi < project.images.length; imgi++) {
                 projectInfo.push(HTMLprojectImage.replace("%data%", project.images[imgi]));
             }
-            var projectEntry = $(".project-entry:last");
+            var projectEntry = $("#other-projects .project-entry:last");
             for (var pInfoi = 0; pInfoi < projectInfo.length; pInfoi++) {
                 projectEntry.append(projectInfo[pInfoi]);
             }
@@ -204,5 +270,6 @@ var projects = {
 bio.display();
 education.display();
 work.display();
-projects.display();
+webProjects.display();
+otherProjects.display();
 $("#mapDiv").append(googleMap);
