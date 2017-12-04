@@ -155,7 +155,8 @@ var webProjects = {
             title: "Readable App (Online demo not available yet)",
             dates: "Oct. 2017 -- Present",
             description: "Combined the declarative component model from React with the state management features of Redux to build a \"Readable\" application. Users can submit their own posts, comment on existing posts, edit, delete, upvote / downvote posts and comments. Leveraged the strengths of React-Router to manage routing of the application. Implemented a backend server providing request APIs using Express and MongoDB.",
-            url: "#", // https://github.com/zhichl/readable
+            github_url: "#", // https://github.com/zhichl/readable
+            demo_url: "#",
             images: [
                 ""
             ]
@@ -165,7 +166,8 @@ var webProjects = {
             title: "Neighborhood Map App",
             dates: "Sep. 2017 -- Oct. 2017",
             description: "Created a single-page app listing places of interests in SF with details showing when interacted. Users can search all included landmarks and, when selected, additional information about a landmark is presented. Implemented MVVM design pattern using Knockout.js and simple filtering functionality. Utilized Google Map APIs and RESTful Flickr APIs for map interaction and image info fetching.",
-            url: "https://github.com/zhichl/neighborhood-map",
+            github_url: "https://github.com/zhichl/neighborhood-map",
+            demo_url: "https://zhichl.github.io/neighborhood-map/",
             images: [
                 "images/neighborhood_map.png"
             ]
@@ -175,7 +177,8 @@ var webProjects = {
             title: "Memory Game",
             dates: "March. 2017 -- May. 2017",
             description: "Built a complete browser-based card matching game (also known as Concentration). Used JQuery for DOM manipulation and event listening. Constructed the code in an extendable way for further difficulty upgrading needed.",
-            url: "https://github.com/zhichl/memory-game", 
+            github_url: "https://github.com/zhichl/memory-game", 
+            demo_url: "https://zhichl.github.io/memory-game/",
             images: [
                 "images/memory_game.png"
             ]
@@ -185,7 +188,8 @@ var webProjects = {
             title: "Arcade Game: Frogger",
             dates: "Jan. 2017 -- March. 2017",
             description: "This is a classic forgger arcade game built with vanilla JS and CSS. Goal to the game is to direct the character going from the grass part to the river part without colliding with any of the enemy bugs.",
-            url: "https://github.com/zhichl/arcade-game-frogger", 
+            github_url: "https://github.com/zhichl/arcade-game-frogger", 
+            demo_url: "https://zhichl.github.io/arcade-game-frogger/",
             images: [
                 "images/arcade_game_frogger.png"
             ]
@@ -199,11 +203,11 @@ var webProjects = {
             var project = this.projects[pi];
             var projectInfo = [];
             
-            projectInfo.push(HTMLprojectTitle.replace("#", project.url).replace("%data%", project.title));
+            projectInfo.push(HTMLprojectTitle.replace("#", project.github_url).replace("%data%", project.title));
             projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
             projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
             for (var imgi = 0; imgi < project.images.length; imgi++) {
-                projectInfo.push(HTMLprojectImage.replace("%data%", project.images[imgi]));
+                projectInfo.push(HTMLprojectImage.replace("#", project.demo_url).replace("%data%", project.images[imgi]));
             }
             var projectEntry = $("#web-projects .project-entry:last");
             for (var pInfoi = 0; pInfoi < projectInfo.length; pInfoi++) {
@@ -219,7 +223,8 @@ var otherProjects = {
             title: "Pathology Visual Query App (Online demo not available)",
             dates: "Sep 2016 -- Jan 2017",
             description: "Employed the design pattern of MVC to develope this iOS App. Implemented methods to represent the nuclei distribution on respect of direction and density from pathology images of PAIS, which allows users to locate and inspect pathological areas in tissue based on their own drawing. Constructed a simple back-end server for communication between the database and the application.",
-            url: "#",
+            github_url: "#",
+            demo_url: "#",
             images: [
                 ""
             ]
@@ -229,7 +234,8 @@ var otherProjects = {
             title: "Prediction of Gene Localization (Online demo not available)",
             dates: "Oct 2015 -- Dec 2015",
             description: "Implemented K-Nearest Neighbor method to predict gene localization with gene data with features. Dealing with missing values to predict given incomplete training gene data. Analysed simulated data to obtain velocity field and compared it with theoretical data to obtain results.",
-            url: "#",
+            github_url: "#",
+            demo_url: "#",
             images: [
                 ""
             ]
@@ -239,7 +245,8 @@ var otherProjects = {
             title: "Fire Brigade Agent Strategy in RoboCup Rescue",
             dates: "2013 -- 2014",
             description: "Constructed building temperature predicting model based on algorithm from the Grey Theory. Proposed a new pre-extinguish fire brigade fire control method instead of the traditional one. Awarded Excellence by Experts Committee (Awarded to 3/37 projects). Results applied by Apollo-Rescue team in competitions and published in ICCAS 2014.",
-            url: "http://ieeexplore.ieee.org/document/6988051/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKC%2BwVbR5S02kn5VQWx45cw%3D%3D",
+            github_url: "http://ieeexplore.ieee.org/document/6988051/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BKC%2BwVbR5S02kn5VQWx45cw%3D%3D",
+            demo_url: "#",
             images: [
                 "images/non_predicted.png", "images/predicted.png", "images/pre_extinguish02_annotated.png"
             ]
@@ -253,11 +260,11 @@ var otherProjects = {
             var project = this.projects[pi];
             var projectInfo = [];
             
-            projectInfo.push(HTMLprojectTitle.replace("#", project.url).replace("%data%", project.title));
+            projectInfo.push(HTMLprojectTitle.replace("#", project.github_url).replace("%data%", project.title));
             projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
             projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
             for (var imgi = 0; imgi < project.images.length; imgi++) {
-                projectInfo.push(HTMLprojectImage.replace("%data%", project.images[imgi]));
+                projectInfo.push(HTMLprojectImage.replace("#", project.demo_url).replace("%data%", project.images[imgi]));
             }
             var projectEntry = $("#other-projects .project-entry:last");
             for (var pInfoi = 0; pInfoi < projectInfo.length; pInfoi++) {
