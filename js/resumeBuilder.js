@@ -157,9 +157,7 @@ var webProjects = {
             description: "Combined the declarative component model from React with the state management features of Redux to build a \"Readable\" application. Users can submit their own posts, comment on existing posts, edit, delete, upvote / downvote posts and comments. Leveraged the strengths of React-Router to manage routing of the application. Implemented a backend server providing request APIs using Express and MongoDB.",
             github_url: "#", // https://github.com/zhichl/readable
             demo_url: "#",
-            images: [
-                ""
-            ]
+            images: []
         },
 
         {
@@ -206,7 +204,7 @@ var webProjects = {
             projectInfo.push(HTMLprojectTitle.replace("#", project.github_url).replace("%data%", project.title));
             projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
             projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
-            for (var imgi = 0; imgi < project.images.length; imgi++) {
+            for (var imgi = 0; project.images.length > 0 && imgi < project.images.length; imgi++) {
                 projectInfo.push(HTMLprojectImage.replace("#", project.demo_url).replace("%data%", project.images[imgi]));
             }
             var projectEntry = $("#web-projects .project-entry:last");
@@ -225,9 +223,7 @@ var otherProjects = {
             description: "Employed the design pattern of MVC to develope this iOS App. Implemented methods to represent the nuclei distribution on respect of direction and density from pathology images of PAIS, which allows users to locate and inspect pathological areas in tissue based on their own drawing. Constructed a simple back-end server for communication between the database and the application.",
             github_url: "#",
             demo_url: "#",
-            images: [
-                ""
-            ]
+            images: []
         },
 
         {
@@ -236,9 +232,7 @@ var otherProjects = {
             description: "Implemented K-Nearest Neighbor method to predict gene localization with gene data with features. Dealing with missing values to predict given incomplete training gene data. Analysed simulated data to obtain velocity field and compared it with theoretical data to obtain results.",
             github_url: "#",
             demo_url: "#",
-            images: [
-                ""
-            ]
+            images: []
         },
 
         {
@@ -263,7 +257,7 @@ var otherProjects = {
             projectInfo.push(HTMLprojectTitle.replace("#", project.github_url).replace("%data%", project.title));
             projectInfo.push(HTMLprojectDates.replace("%data%", project.dates));
             projectInfo.push(HTMLprojectDescription.replace("%data%", project.description));
-            for (var imgi = 0; imgi < project.images.length; imgi++) {
+            for (var imgi = 0; project.images.length > 0 && imgi < project.images.length; imgi++) {
                 projectInfo.push(HTMLprojectImage.replace("#", project.demo_url).replace("%data%", project.images[imgi]));
             }
             var projectEntry = $("#other-projects .project-entry:last");
